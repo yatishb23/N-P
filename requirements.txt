@@ -5,6 +5,7 @@ numpy==1.26.4
 Pillow
 scikit-learn
 Keras
+h5py
 requests
 kaggle
 opencv-python-headless==4.9.0.80

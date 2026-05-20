@@ -2,12 +2,15 @@ import os
 import json
 import numpy as np
 from PIL import Image
+os.environ['TF_USE_LEGACY_KERAS'] = '1'
 import tensorflow as tf
+import streamlit as st
 
 class SkinDiseaseModel:
-    def __init__(self, model_path='model.h5', class_indices_path='class_indices.json'):
-        self.model_path = model_path
-        self.class_indices_path = class_indices_path
+    def __init__(self, model_filename='model.h5', class_indices_filename='class_indices.json'):
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self.model_path = os.path.join(base_dir, model_filename)
+        self.class_indices_path = os.path.join(base_dir, class_indices_filename)
         self.model = None
         self.class_names = []
         
@@ -23,8 +26,10 @@ class SkinDiseaseModel:
                     self.class_names = {v: k for k, v in class_indices.items()}
                 self.is_loaded = True
             else:
+                st.error(f"Missing files. Model: {os.path.exists(self.model_path)}, Indices: {os.path.exists(self.class_indices_path)}")
                 self.is_loaded = False
         except Exception as e:
+            st.error(f"Error loading model: {e}")
             print(f"Error loading model: {e}")
             self.is_loaded = False
 
