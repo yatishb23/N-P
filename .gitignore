@@ -1,0 +1,30 @@
+# Virtual environments
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Temporary files and directories
+temp/
+
+# Environment variables
+.env
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Machine Learning / Data
+# Uncomment the line below if you don't want to track the model file in Git
+# model.h5
+
+# Streamlit config (if any)
+.streamlit/
