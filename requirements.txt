@@ -7,7 +7,7 @@ scikit-learn
 Keras
 requests
 kaggle
-opencv-python==4.9.0.80
+opencv-python-headless==4.9.0.80
 google-genai
 fpdf
 plotly
