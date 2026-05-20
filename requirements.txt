@@ -4,7 +4,8 @@ pandas
 numpy==1.26.4
 Pillow
 scikit-learn
-Keras
+keras
+tf-keras
 h5py
 requests
 kaggle
