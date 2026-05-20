@@ -1,13 +1,13 @@
 streamlit
 tensorflow
 pandas
-numpy
+numpy==1.26.4
 Pillow
 scikit-learn
 Keras
 requests
 kaggle
-opencv-python-headless
+opencv-python==4.9.0.80
 google-genai
 fpdf
 plotly
